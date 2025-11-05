@@ -4,14 +4,21 @@ import QRcodeIcon from '@shared/assets/icons/QRcodeIcon';
 import ArrowRightIcon from '@shared/assets/icons/ArrowRightIcon';
 import { COLORS } from '@shared/lib/constants/colors';
 
-export const UserHeader = () => (
+type UserHeaderProps = {
+  handleAvatar: () => void;
+  handleQRcode: () => void;
+};
+
+export const UserHeader = ({ handleAvatar, handleQRcode }: UserHeaderProps) => (
   <View style={styles.container}>
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity onPress={handleAvatar} style={styles.button}>
       <AvatarIcon />
       <Text style={styles.text}>Charlotte</Text>
       <ArrowRightIcon />
     </TouchableOpacity>
-    <QRcodeIcon />
+    <TouchableOpacity onPress={handleQRcode}>
+      <QRcodeIcon />
+    </TouchableOpacity>
   </View>
 );
 
@@ -20,7 +27,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 24,
     backgroundColor: COLORS.background,
     paddingRight: 16,
     paddingVertical: 2,
@@ -30,5 +36,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
   },
-  text: { color: COLORS.white, fontSize: 18 },
+  text: { color: COLORS.white, fontSize: 16, fontWeight: '500' },
 });
