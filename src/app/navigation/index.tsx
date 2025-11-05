@@ -12,6 +12,13 @@ import PaymentIcon from '@shared/assets/icons/tab-bar/PaymentIcon';
 import HistoryIcon from '@shared/assets/icons/tab-bar/HistoryIcon';
 import AnalyticsIcon from '@shared/assets/icons/tab-bar/AnalyticsIcon';
 import ChatIcon from '@shared/assets/icons/tab-bar/ChatIcon';
+import {
+  HOME,
+  PAYMENTS,
+  HISTORY,
+  ANALYTICS,
+  CHATS,
+} from '@shared/lib/constants/screens';
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -26,7 +33,7 @@ export const RootNavigation = () => {
       }}
     >
       <Tab.Screen
-        name='Home'
+        name={HOME}
         component={HomeScreen}
         options={{
           tabBarIcon: ({ color }: { color: string }) => (
@@ -35,7 +42,7 @@ export const RootNavigation = () => {
         }}
       />
       <Tab.Screen
-        name='Payments'
+        name={PAYMENTS}
         component={PaymentsScreen}
         options={{
           tabBarIcon: ({ color }: { color: string }) => (
@@ -44,7 +51,7 @@ export const RootNavigation = () => {
         }}
       />
       <Tab.Screen
-        name='History'
+        name={HISTORY}
         component={HistoryScreen}
         options={{
           tabBarIcon: ({ color }: { color: string }) => (
@@ -53,7 +60,7 @@ export const RootNavigation = () => {
         }}
       />
       <Tab.Screen
-        name='Analytics'
+        name={ANALYTICS}
         component={AnalyticsScreen}
         options={{
           tabBarIcon: ({ color }: { color: string }) => (
@@ -62,7 +69,7 @@ export const RootNavigation = () => {
         }}
       />
       <Tab.Screen
-        name='Chats'
+        name={CHATS}
         component={ChatsScreen}
         options={{
           tabBarIcon: ({ color }: { color: string }) => (
