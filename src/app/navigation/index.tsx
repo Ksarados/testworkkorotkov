@@ -6,6 +6,7 @@ import HistoryScreen from '@pages/history/ui/HistoryScreen';
 import AnalyticsScreen from '@pages/analytics/ui/AnalyticsScreen';
 import ChatsScreen from '@pages/chats/ui/ChatsScreens';
 import { BottomTabParamList } from './types';
+import { COLORS } from '@shared/lib/constants/colors';
 
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -15,8 +16,8 @@ export const RootNavigation = () => {
       screenOptions={{
         headerShown: false,
         tabBarStyle: styles.tabBarStyle,
-        tabBarActiveTintColor: '#FE5900',
-        tabBarInactiveTintColor: '#FFF',
+        tabBarActiveTintColor: COLORS.orange,
+        tabBarInactiveTintColor: COLORS.white,
         tabBarItemStyle: styles.tabBarItemStyle,
       }}
     >
@@ -32,7 +33,7 @@ export const RootNavigation = () => {
 const styles = StyleSheet.create({
   tabBarStyle: {
     height: Platform.OS === 'ios' ? 88 : 70,
-    backgroundColor: '#050402',
+    backgroundColor: COLORS.background,
   },
   tabBarItemStyle: {
     marginTop: 8,
