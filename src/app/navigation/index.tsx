@@ -83,7 +83,7 @@ export const RootNavigation = () => {
 
 const styles = StyleSheet.create({
   tabBarStyle: {
-    height: Platform.OS === 'ios' ? 82 : 64,
+    height: Platform.OS === 'ios' ? 82 : 88,
     backgroundColor: COLORS.background,
     borderTopWidth: 0,
     elevation: 0,
