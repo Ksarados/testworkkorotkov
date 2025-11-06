@@ -2,7 +2,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet, Platform } from 'react-native';
 import HomeScreen from '@pages/home/ui/HomeScreen';
 import PaymentsScreen from '@pages/payments/ui/PaymentsScreen';
-import HistoryScreen from '@pages/history/ui/HistoryScreen';
 import AnalyticsScreen from '@pages/analytics/ui/AnalyticsScreen';
 import ChatsScreen from '@pages/chats/ui/ChatsScreens';
 import { BottomTabParamList } from './types';
@@ -10,6 +9,7 @@ import { COLORS } from '@shared/lib/constants/colors';
 import HomeIcon from '@shared/assets/icons/tab-bar/HomeIcon';
 import PaymentIcon from '@shared/assets/icons/tab-bar/PaymentIcon';
 import HistoryIcon from '@shared/assets/icons/tab-bar/HistoryIcon';
+import TopTabsNavigator from './TopTabsNavigator';
 import AnalyticsIcon from '@shared/assets/icons/tab-bar/AnalyticsIcon';
 import ChatIcon from '@shared/assets/icons/tab-bar/ChatIcon';
 import {
@@ -52,7 +52,7 @@ export const RootNavigation = () => {
       />
       <Tab.Screen
         name={HISTORY}
-        component={HistoryScreen}
+        component={TopTabsNavigator}
         options={{
           tabBarIcon: ({ color }: { color: string }) => (
             <HistoryIcon color={color} />
@@ -85,6 +85,9 @@ const styles = StyleSheet.create({
   tabBarStyle: {
     height: Platform.OS === 'ios' ? 82 : 64,
     backgroundColor: COLORS.background,
+    borderTopWidth: 0,
+    elevation: 0,
+    shadowOpacity: 0,
   },
 });
 

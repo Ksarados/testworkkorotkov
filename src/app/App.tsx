@@ -3,20 +3,21 @@ import { StatusBar } from 'react-native';
 import RootNavigation from './navigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { COLORS } from '@shared/lib/constants/colors';
 
 export default function App() {
   return (
-    <GestureHandlerRootView>
-      <SafeAreaProvider>
+    <SafeAreaProvider>
+      <GestureHandlerRootView>
         <NavigationContainer>
           <StatusBar
-            barStyle='dark-content'
-            backgroundColor='#FFFFFF'
+            barStyle='light-content'
+            backgroundColor={COLORS.background}
             translucent={false}
           />
           <RootNavigation />
         </NavigationContainer>
-      </SafeAreaProvider>
-    </GestureHandlerRootView>
+      </GestureHandlerRootView>
+    </SafeAreaProvider>
   );
 }

@@ -1,10 +1,11 @@
 import { Text, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { COLORS } from '@shared/lib/constants/colors';
 
 export default function PaymentsScreen() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>PaymentsScreen</Text>
+      <Text style={styles.text}>PaymentsScreen</Text>
     </SafeAreaView>
   );
 }
@@ -14,5 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: COLORS.background,
   },
+  text: { color: COLORS.white },
 });

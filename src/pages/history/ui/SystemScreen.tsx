@@ -2,10 +2,10 @@ import { Text, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS } from '@shared/lib/constants/colors';
 
-export default function AnalyticsScreen() {
+export function SystemScreen() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>AnalyticsScreen</Text>
+      <Text style={styles.text}>SystemScreen</Text>
     </SafeAreaView>
   );
 }
