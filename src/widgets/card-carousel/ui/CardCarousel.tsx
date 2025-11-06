@@ -41,7 +41,9 @@ export const CardsCarousel = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { marginTop: 24 },
+  container: {
+    marginTop: 24,
+  },
   buttonAdd: {
     width: 40,
     height: 98,
