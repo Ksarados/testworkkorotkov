@@ -1,15 +1,17 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { COLORS } from '@shared/lib/constants/colors';
+import ArrowBackIcon from '@shared/assets/icons/ArrowBackIcon';
+import MessageIcon from '@shared/assets/icons/MessageIcon';
 
 export const HeaderNotice = () => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
-        <Text>+</Text>
+      <TouchableOpacity onPress={() => console.log('Press Back')}>
+        <ArrowBackIcon />
       </TouchableOpacity>
       <Text style={styles.title}>Notifications</Text>
-      <TouchableOpacity>
-        <Text>+</Text>
+      <TouchableOpacity onPress={() => console.log('Press Notice')}>
+        <MessageIcon />
       </TouchableOpacity>
     </View>
   );

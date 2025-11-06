@@ -1,6 +1,6 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { COLORS } from '@shared/lib/constants/colors';
 import {
   AllScreen,
@@ -10,6 +10,7 @@ import {
   TravelScreen,
 } from '@pages/history/ui';
 import { HeaderNotice } from '@widgets/header-notice/ui/HeaderNotice';
+
 
 const Tab = createMaterialTopTabNavigator();
 
