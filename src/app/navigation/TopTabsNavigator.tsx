@@ -11,7 +11,6 @@ import {
 } from '@pages/history/ui';
 import { HeaderNotice } from '@widgets/header-notice/ui/HeaderNotice';
 
-
 const Tab = createMaterialTopTabNavigator();
 
 export default function TopTabsNavigator() {
@@ -25,6 +24,7 @@ export default function TopTabsNavigator() {
           },
           tabBarContentContainerStyle: {
             marginHorizontal: 16,
+            justifyContent: 'space-between',
           },
           tabBarStyle: {
             backgroundColor: COLORS.background,
@@ -33,6 +33,10 @@ export default function TopTabsNavigator() {
           },
           tabBarLabelStyle: {
             textTransform: 'none',
+          },
+          tabBarIndicatorContainerStyle: {
+            borderBottomColor: COLORS.darkGray,
+            borderBottomWidth: 1,
           },
           tabBarIndicatorStyle: {
             backgroundColor: COLORS.orange,
@@ -57,5 +61,5 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: COLORS.background,
-  }
+  },
 });
