@@ -44,11 +44,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 24,
-    backgroundColor: COLORS.background,
     padding: 8,
   },
   button: {
     alignItems: 'center',
+    width: 64,
     gap: 8,
   },
   text: { color: COLORS.white, fontWeight: '500' },
