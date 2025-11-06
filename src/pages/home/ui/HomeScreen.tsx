@@ -53,7 +53,7 @@ export const transactions: Transaction[] = [
 
 export default function HomeScreen() {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['top']}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <UserHeader
           handleAvatar={() => console.log('Press Avatar')}
