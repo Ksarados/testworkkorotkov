@@ -1,4 +1,4 @@
-**Тестовое задание** 
+# Тестовое задание 
 
 Задание: Сверстайте два экрана, которые на макете фигмы.[**Макет дизайна**](https://www.figma.com/design/TUs0yc4YQtkpMhHvawK5iG/Test?node-id=2118-1077&p=f&t=8uuDFdewOA7mhhBg-0).
 
@@ -20,6 +20,11 @@ npx react-native run-ios
 npx react-native run-android
 
 ```
+
+Один экран уведомления находится в истории
+
+
+
 
 Задание выпонил Коротков Андрей Алексеевич:
 

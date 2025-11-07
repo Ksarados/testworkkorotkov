@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StyleSheet, Platform } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import HomeScreen from '@pages/home/ui/HomeScreen';
 import PaymentsScreen from '@pages/payments/ui/PaymentsScreen';
 import AnalyticsScreen from '@pages/analytics/ui/AnalyticsScreen';
@@ -23,11 +23,20 @@ import {
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 
 export const RootNavigation = () => {
+  const insets = useSafeAreaInsets();
+
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-        tabBarStyle: styles.tabBarStyle,
+        tabBarStyle: {
+          backgroundColor: COLORS.background,
+          borderTopWidth: 0,
+          elevation: 0,
+          shadowOpacity: 0,
+          height: 60 + insets.bottom,
+          paddingBottom: insets.bottom,
+        },
         tabBarActiveTintColor: COLORS.orange,
         tabBarInactiveTintColor: COLORS.white,
       }}
@@ -80,15 +89,5 @@ export const RootNavigation = () => {
     </Tab.Navigator>
   );
 };
-
-const styles = StyleSheet.create({
-  tabBarStyle: {
-    height: Platform.OS === 'ios' ? 82 : 88,
-    backgroundColor: COLORS.background,
-    borderTopWidth: 0,
-    elevation: 0,
-    shadowOpacity: 0,
-  },
-});
 
 export default RootNavigation;
