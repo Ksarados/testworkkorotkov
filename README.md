@@ -1,6 +1,27 @@
-# Тестовое задание 
+# Тестовое задание: Мобильное приложение
 
-Задание: Сверстайте два экрана, которые на макете фигмы.[**Макет дизайна**](https://www.figma.com/design/TUs0yc4YQtkpMhHvawK5iG/Test?node-id=2118-1077&p=f&t=8uuDFdewOA7mhhBg-0).
+## Задание
+Сверстать два экрана мобильного приложения согласно предоставленному макету Figma.
+[**Макет дизайна**](https://www.figma.com/design/TUs0yc4YQtkpMhHvawK5iG/Test?node-id=2118-1077&p=f&t=8uuDFdewOA7mhhBg-0).
+
+## Скринщоты экранов готового приложения
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="./assets/screens/screen-1.png" alt="Экран 1" width="300"><br>
+        <em>Экран 1: Основной интерфейс</em>
+      </td>
+      <td align="center">
+        <img src="./assets/screens/screen-2.png" alt="Экран 2" width="300"><br>
+        <em>Экран 2: Уведомления</em>
+      </td>
+    </tr>
+  </table>
+</div>
+
+**Примечание**: Второй экран (уведомления) реализован в истории/навигации приложения.
 
 # Getting Started
 
@@ -21,7 +42,6 @@ npx react-native run-android
 
 ```
 
-Один экран уведомления находится в истории
 
 
 
